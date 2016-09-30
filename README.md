@@ -24,4 +24,4 @@ Because these datasets are generated from our internal collection management sys
 * Please do not mislead others or misrepresent the metadata or its sources.
 * Please make the metadata and any improvements thereto freely available under the same terms as LSH, i.e., without claiming any legal right to, or imposing any legally binding conditions on access to the metadata or your improvements.
 
-The writers of these guidelines wish to thank [Europeana] (http://www.europeana.eu), [Museum of Modern Art] (http://www.moma.org), [Tate] (http://www.tate.org.uk) and [Cooper Hewitt, Smithsonian Design Museum] (http://cooperhewitt.org).
+*The writers of these guidelines wish to thank [Europeana] (http://www.europeana.eu), [Museum of Modern Art] (http://www.moma.org), [Tate] (http://www.tate.org.uk) and [Cooper Hewitt, Smithsonian Design Museum] (http://cooperhewitt.org).*
