@@ -1,0 +1,110 @@
+Table Descriptions (v. 1.0) for LSH CSV-exports on GitHub (2016-09-30);;;
+;;;
+File name;File Description;Column name;Column Description
+LSH Github - ObjDaten.csv;Objects table (original table name: ObjDaten) - The main table with museum object descriptions;;
+;;ObjId;Primary key for object table
+;;ObjKueId;Foreign key for name/artists table
+;;ObjTitelOriginalS;Title/keyword(s) of object
+;;ObjTitelWeitereM;Short description of object
+;;ObjInventarNrS;Inventory number (non-numeric)
+;;ObjInventarNrSortiertS;inventory number (numeric)
+;;ObjReferenzNrS;Hallwyl museum categories (groups)
+;;ObjJahrVonL;Year, from
+;;ObjJahrBisL;Year, to
+;;ObjDatierungS;Date (text)
+;;ObjTechMatM;Technique / Material
+;;ObjSignaturM;Signature
+;;ObjCreditlineM;On display (at the museum) or in storage
+;;ObjReprorechtM;part of LSH collections or deposit
+;;ObjReserve01M;Long description of the object(s)
+;;ObjFeld01M;type of accession (gift, purchase, etc.)
+;;ObjFeld02M;date of accession
+;;ObjFeld03M;Accession from
+;;ObjFeld06M;Provenance
+;;ObjGeografieS;Historical location (country, city, etc.)
+;;ObjSystematikS;Classification
+;;ObjAnzahlS;Number of objects (some of the inventory numbers contain many separate objects)
+;;AufAufgabeS;Museum/Collection name 
+;;;
+LSH Github - ObjMass.csv;Measurement table (original table name: ObmMass) - Measurements for the objects ;;
+;;ObmId;Primary key for measurement table
+;; ObmObjId;Foreign key for object table
+;; ObmMasseS;measurement, text
+;; ObmTypMasseS;measurement, type (height, width, etc.)
+;; ObmMasseHF;measurement, numeric
+;; ObmMasseMS;measurement unit
+;; ObmMasseBemVorS;notes for measurement fields (describes what part of the object the measurement is describing)
+;; ObmMasseBemNachS;second notes field
+;;;
+LSH Github - ObjMultiple.csv;Objects, multiple values (original table name: ObjMultiple) - Table containing multiple values for each object (examples: keywords, classification);;
+;;OmuId;Primary key for multiple-table
+;;OmuObjId;Foreign key for object table
+;;OmuTypS;"Type of value (is used to classify each value in relation to the object (for instance, type: ""keyword"" or type: ""keyword (english)"")"
+;;OmuInhalt01S;"For the type ""material"" this value is the technique used for that specific material (example: broderi (embroidery) in relation to the material: ylle (wool))"
+;;OmuInhalt01M;Value in relation to OmuTypS (could be a material, a keyword, the name of a geographical location, etc.)
+;;OmuBemerkungM;Notes for the value in OmuInhalt01M (could be a note of where on the object that particular material/technique is applied)
+;;;
+LSH Github - Kuenstler.csv;Names (original table name: Kuenstler) - related names to the objects (artists, owners, users, institutions etc.);;
+;;KueId;Primary key for name table
+;;KueTypS;Type of name (person or organisation)
+;;KueVorNameS;First name
+;;KueNameS;Name (second name if nametype is person)
+;;KueAliasS;Family Name (Dynasty, kin, etc.)
+;;KueSortierungS;Second name and First name put together
+;;KueFunktionS;Profession
+;;KueReserve01M;Biographical text
+;;KueGeschlechtS;Gender
+;;KueNationS;Nationality
+;;;
+LSH Github - KuenstlerDatierung.csv;Dates related to names (year of birth, death, etc.);;
+;;KudId;Primary Key for Name-date table
+;;KudKueId;Foreign Key to Name table 
+;;KudArtS;Type of date (lifetime, operation time (for instance if the name is an organisation: period when the organisation was active)
+;;KudDatierungS;Date value in text
+;;KudTagVonL;Date, from (day)
+;;KudMonatVonL;Date, from (month)
+;;KudJahrVonL;Date, from (year)
+;;KudTagBisL;Date, to (day)
+;;KudMonatBisL;Date, to (month)
+;;KudJahrBisL;Date, to (year)
+;;KudBemerkungS;Notes for date value
+;;KudOrtS;Location (in relation to specific date, could be the name of a city (birth place), etc.)
+;;KudLandS;Location (in relation to specific date, could be the name of a country, etc.)
+;;;
+LSH Github - Obj_Kuenstler.csv;Relations between names and objects;;
+;;OkuId;primary key for names-objects relation table
+;;OkuObjId;Foreign key to ObjDaten (objects table)
+;;OkuKueId;Foreign key to Kuenstler (name table)
+;;OkuArtS;Type of relation to object (example: owner, manufacturer)
+;;OkuFunktionS;"Note to OkuArtS (notes to type of relation, for instance OkuFunktionS could state: ""original"" in relation to OkuArtS: ""owner"")"
+;;OkuBeschreibungS;Further notes to OkuArtS (often a date (in text) 
+;;OkuValidierungS;Validation of value (some relations between objects and names are assumed by tradition, but doesn't necessary have a certain source of fact stating the relation)
+;;;
+LSH GitHub - Ereignis.csv;Historical events (in relation to objects and names);;
+;;ErgId;Primary key for Ereignis table
+;;ErgTypS;Classification of historical event (example: Ceremony, War/Battle etc.)
+;;ErgArtS;Wikipedia-URL (link to article on the historical event)
+;;ErgTitelM;Short description of the historical event
+;;ErgKurztitelS;Title of the historical event
+;;ErgStelleS;Geographical location for the historical event
+;;ErgOrtS;Type of event within classification (example: a wedding (ceremony))
+;;ErgDatierungS;Date of event (text)
+;;ErgJahrVonL;Year, from
+;;ErgJahrBisL;Year, to
+;;ErgBeschreibungM;Description of the event
+;;;
+LSH GitHub - Ereignis_Obj.csv;Historical events - relations to objects;;
+;;EroId;Primary key for Ereignis_Obj
+;;EroErgId;Foreign key to Ereignis-table
+;;EroObjId;Foreign key to ObjDaten-table
+;;EroArtS;Verification of the relation (if certain, presumed, by tradition, etc.)
+;;EroTitelS;Relation type between object and historical event (example: an object is War-Booty)
+;;EroBeschreibungM;Notes to the relation between object and historical event
+;;;
+LSH GitHub - Ereignis_Kuenstler.csv;Historical events - relations to names;;
+;;ErkId;Primary key for Ereignis_Kuenstler
+;;ErkErgId;Foreign key to Ereignis-table
+;;ErkKueId;Foreign key to Kuenstler-table
+;;ErkArtS;Verification of the relation (if certain, presumed, by tradition, etc.)
+;;ErkTitelS;role of the name in relation to the object (example: manufacturer)
+;;ErkBeschreibungM;Notes to the relation between name and historical event
