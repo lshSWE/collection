@@ -5,7 +5,7 @@ Welcome to The Royal Armoury, Skokloster Castle and the Hallwyl Museum (In Swedi
 Here you will find datasets with metadata of about 91,000 museum objects from the collection management system used by the three Swedish museums. The purpose with these datasets is to provide as much free open museum data as possible – all licensed with [CC0] (https://creativecommons.org/publicdomain/zero/1.0/). There is data about the museum objects, names and usage of the objects in historical events (please see the detailed description for each CSV-file).
 
 ### Dataset Description
-You will find a detailed description of each CSV-file (where each column is described) either in our [wiki] (https://github.com/lshSWE/collection/wiki) or in the *LSH on GitHub - CSV-description.csv*-file inside the repository.
+You will find a detailed description of each CSV-file (where each column is described) either in our [wiki] (https://github.com/lshSWE/collection/wiki) or in the *LSH on GitHub - CSV Descriptions.csv*-file inside the repository.
 
 ### File format
 The metadata is stored in CSV-files (UTF-16 - vertical bar as column separator). The CSV-files are exported from the SQL-based collection management system used by the three museums. In every CSV-file you will find primary and foreign keys to other tables, which means that it is possible to rebuild an relational database with the datasets. Each CSV-file represent an SQL-table, and each CSV-file is stored within an TAR archive file (gzip). 
