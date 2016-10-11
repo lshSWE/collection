@@ -19,6 +19,7 @@ At the moment most of the data is in Swedish, but future uploads may contain tra
 ### LIDO XML Dataset - Additional Dataset ###
 Apart from the complete dataset with all available objects you will also find our [LIDO] (http://network.icom.museum/cidoc/working-groups/lido/what-is-lido/) XML Datasets - exports made from the Europeana Mapping Tool (MINT). In each TAR archive you will find multiple XML files - one XML for every inventory number. These LIDO XML files contains enriched data according to the LIDO format, and you will also find links to image files of each object. The LIDO XML Datasets are the same data as you will find on Europeana for the three museums. Since Europeana requires each metadata object to have an image, these datasets only contains metadata for objects that has an image link. The file names of each XML file is just a continous ID number from the MINT Mapping Tool, but within each XML file you will find the Museum inventory number, and the Object ID, which is the same as the primary key *in LSH Github - ObjDaten.csv*-file. 
 
+The LIDO XML Dataset contains combined data (different from the .CSV-datasets where each CSV-file represents a database table) so that each XML file includes object description and related names. 
 
 
 ### Data In Progress
