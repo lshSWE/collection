@@ -1,8 +1,8 @@
 # The Royal Armoury, Skokloster Castle and the Hallwyl Museum Collection 
 
-Welcome to The Royal Armoury, Skokloster Castle and the Hallwyl Museum (In Swedish: *Livrustkammaren och Skoklosters slott med Stiftelsen Hallwylska museet* ([LSH] (http://www.lsh.se)).
+Welcome to The Royal Armoury, Skokloster Castle and the Hallwyl Museum - three Swedish museums  (http://www.shm.se)).
 
-Here you will find datasets with metadata of about 91,000 museum objects from the collection management system used by the three Swedish museums. The purpose with these datasets is to provide as much free open museum data as possible – all licensed with [CC0] (https://creativecommons.org/publicdomain/zero/1.0/). There is data about the museum objects, names and usage of the objects in historical events (please see the detailed description for each CSV-file).
+Here you will find datasets with metadata of about 91,000 museum objects from a previous collection management system used by the three Swedish museums. The purpose with these datasets is to provide as much free open museum data as possible – all licensed with [CC0] (https://creativecommons.org/publicdomain/zero/1.0/). There is data about the museum objects, names and usage of the objects in historical events (please see the detailed description for each CSV-file).
 
 ### Dataset Description
 You will find a detailed description of each CSV-file (where each column is described) either in our [wiki] (https://github.com/lshSWE/collection/wiki) or in the *LSH on GitHub - CSV Descriptions.csv*-file inside the repository.
